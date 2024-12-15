@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design and Implementation of ALU</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        header p {
+            font-size: 20px;
+        }
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .left, .right {
+            width: 48%;
+        }
+        .right {
+            width: 48%;
+        }
+        .contact, .follow {
+            background-color: #34495E;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding:50 20px;
+            text-align: left;
+        }
+        li {
+            display: inline;
+            margin: 0 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .social-links a {
+            font-size: 24px;
+            margin: 0 15px;
+            color: white;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #1abc9c;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+
+<header>
+    <h1>Design and Implementation of Arithmetic and Logic Unit (ALU)</h1>
+    <p>VLSI-based ALU Design: High-Speed Arithmetic and Logic Operations</p>
+</header>
+
+<section>
+    <div class="content">
+        <div class="left">
+            <h2>Abstract</h2>
+            <p>	The Arithmetic and Logic Unit (ALU) is a core component of modern digital processors such as CPUs, FPUs, and GPUs, performing fundamental arithmetic and logical operations essential to computing systems. This research details the design and implementation of a VLSI-based ALU capable of executing nine key operations: addition, subtraction, multiplication, shifting, comparison, AND, OR, NOT, and XOR.</p>
+            <p>	The design leverages advanced techniques like the Carry Look-Ahead Adder (CLA) for high-speed addition and a Vedic multiplier employing the Urdhva Triyambhyam sutra for efficient multiplication. The ALU design is validated at both gate and chip levels using the Xilinx ISE Design Suite 14.7.</p>
+            <p>	The study explores different arithmetic and logical methodologies, optimizing for performance, power consumption, and propagation delay. Each operation is implemented and tested with precise hardware description models in Verilog HDL, ensuring the design's functionality and scalability for applications ranging from basic 4-bit operations to 512-bit implementations.</p>
+            <p>	The research also incorporates ripple-carry principles for modular scalability and demonstrates the use of 2x2 and 4x4 Vedic multipliers as foundational building blocks for larger multiplier designs.</p>
+            <p>	Additionally, this ALU supports efficient comparison operations using magnitude comparators and shifting capabilities through a versatile shift register. Logical gates such as AND, OR, NOT, and XOR are implemented with minimal delays, enhancing the ALU's overall efficiency.</p>
+        </div>
+
+        <div class="right">
+            <h2>Key Features</h2>
+            <ul>
+                <li>1. Support for 9 key operations</li>
+                <br><li>2. High-speed addition with CLA</li>
+               <br> <li>3. Efficient multiplication using Vedic multiplier</li>
+               <br> <li>4. Validated at both gate and chip levels</li>
+               <br> <li>5. Verilog HDL implementation for scalability</li>
+               <br> <li>6. Optimized for power, performance, and delay</li>
+               <br> <li>7. Modular and scalable design</li> 
+	    
+            </ul>
+            <button onclick="alert('Thank you for your interest!')">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<div class="contact">
+    <h2>Contact Information</h2>
+    <p>If you have any questions or would like to collaborate, feel free to contact me!</p>
+    <p>Email: <a href="mailto:rohithkumarchinta00143@gmail.com">rohithkumarchinta00143@gmail.com</a></p>
+</div>
+
+<section class="follow">
+    <h2>Follow Me</h2>
+    <div class="social-links">
+        <a href="https://www.instagram.com/rohii3410" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/rohith-kumar-chinta-209984225" target="_blank">LinkedIn</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 ALU Design and Implementation. All rights reserved.</p>
+</footer>
+
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
